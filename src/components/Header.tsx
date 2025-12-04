@@ -206,7 +206,7 @@ export default function Header() {
               <div className="flex justify-between items-center p-5 border-b">
                 <div className="text-lg font-bold text-[#8B0000]">Paveé</div>
                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-lg hover:bg-gray-100">
-                  <X className="w-7 h-7" />
+                  <X className="w-7 h-7 text-black" />
                 </button>
               </div>
 
@@ -220,7 +220,7 @@ export default function Header() {
                         href={link.href}
                         onClick={(e) => handleNavClick(e, link.href)}
                         whileTap={{ scale: 0.97 }}
-                        className={`block px-5 py-4 text-base font-semibold rounded-xl transition ${
+                        className={`block px-5 py-4 text-base text-black font-semibold rounded-xl transition ${
                           isActive
                             ? "bg-[#8B0000] text-white"
                             : "bg-gray-50 hover:bg-[#8B0000] hover:text-white"
@@ -240,9 +240,9 @@ export default function Header() {
                 <div ref={mobileLangRef}>
                   <button
                     onClick={() => setIsLangOpen(!isLangOpen)}
-                    className="flex justify-between w-full px-4 py-4 bg-gray-50 rounded-xl font-semibold text-sm"
+                    className="flex justify-between w-full px-4 py-4 bg-[#880000] rounded-xl font-semibold text-sm"
                   >
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-3 text-white">
                       <ReactCountryFlag countryCode={selectedLang.code} svg style={{ width: 22, height: 22 }} />
                       {selectedLang.label}
                     </span>
