@@ -85,10 +85,10 @@ export default function Commitment() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5 }}
-                                className="absolute -bottom-6 -right-6 bg-teal-600 text-white px-6 py-5 rounded-2xl shadow-2xl text-center"
+                                className="absolute -bottom-6 -right-6 bg-teal-600 text-white p-3 rounded-2xl shadow-2xl text-center"
                             >
-                                <p className="text-2xl md:text-3xl font-bold">15+ Years</p>
-                                <p className="text-xs md:text-sm opacity-90">of Trusted Care</p>
+                                <p className="text-xl font-bold">Reliable services</p>
+                                <p className="text-xs md:text-sm opacity-90">with Care you can trust</p>
                             </motion.div>
                         </div>
                     </motion.div>

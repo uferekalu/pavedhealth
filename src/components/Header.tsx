@@ -8,10 +8,11 @@ import ReactCountryFlag from "react-country-flag";
 // Updated with proper href + id mapping
 const navLinks = [
   { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
   { name: "Welcome", href: "#welcome" },
   { name: "Service List", href: "#services" },
   { name: "Blog", href: "#blog" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Testimonials", href: "#reviews" },
   { name: "Video Gallery", href: "#videos" },
   { name: "Book Online", href: "#book" },
 ];
