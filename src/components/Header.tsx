@@ -13,8 +13,8 @@ const navLinks = [
   { name: "Service List", href: "#services" },
   { name: "Blog", href: "#blog" },
   { name: "Testimonials", href: "#reviews" },
-  { name: "Video Gallery", href: "#videos" },
-  { name: "Book Online", href: "#book" },
+  // { name: "Video Gallery", href: "#videos" },
+  // { name: "Book Online", href: "#book" },
 ];
 
 const LANGUAGES = [
@@ -27,12 +27,11 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [selectedLang, setSelectedLang] = useState(LANGUAGES[0]);
-  const [activeSection, setActiveSection] = useState("home"); // Tracks current section
+  const [activeSection, setActiveSection] = useState("home"); 
 
   const langRef = useRef<HTMLDivElement | null>(null);
   const mobileLangRef = useRef<HTMLDivElement | null>(null);
 
-  // Close language dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -48,12 +47,10 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "unset";
   }, [isMobileMenuOpen]);
 
-  // Track active section on scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 120;
@@ -70,11 +67,10 @@ export default function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run on mount
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll handler
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -91,7 +87,6 @@ export default function Header() {
 
   return (
     <>
-      {/* HEADER */}
       <motion.header
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -99,13 +94,9 @@ export default function Header() {
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md backdrop-blur-md border-b border-gray-100"
       >
         <div className="max-w-screen-2xl mx-auto h-[70px] flex items-center justify-between px-6">
-
-          {/* LOGO */}
           <div className="text-xl font-bold tracking-tight text-[#8B0000]">
             Paveé Healthcare
           </div>
-
-          {/* DESKTOP NAV */}
           <nav className="hidden lg:flex items-center space-x-7 text-black font-medium">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.substring(1);
@@ -128,14 +119,12 @@ export default function Header() {
             })}
           </nav>
 
-          {/* RIGHT SIDE (Desktop) */}
           <div className="hidden lg:flex items-center space-x-6">
             <button className="px-4 py-2 text-sm font-semibold border border-[#8B0000] text-[#8B0000] rounded-lg hover:bg-[#8B0000] hover:text-white transition">
               Login
             </button>
 
-            {/* LANGUAGE DROPDOWN */}
-            <div className="relative" ref={langRef}>
+            {/* <div className="relative" ref={langRef}>
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center gap-2 bg-white border border-gray-200 px-3 py-2 rounded-xl text-sm shadow-sm hover:shadow transition"
@@ -170,7 +159,7 @@ export default function Header() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </div> */}
           </div>
 
           {/* MOBILE MENU BUTTON */}
@@ -238,7 +227,7 @@ export default function Header() {
                 </button>
 
                 {/* Mobile Language Switcher */}
-                <div ref={mobileLangRef}>
+                {/* <div ref={mobileLangRef}>
                   <button
                     onClick={() => setIsLangOpen(!isLangOpen)}
                     className="flex justify-between w-full px-4 py-4 bg-[#880000] rounded-xl font-semibold text-sm"
@@ -275,7 +264,7 @@ export default function Header() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           </>

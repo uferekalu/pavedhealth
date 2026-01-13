@@ -83,20 +83,20 @@ export default function Footer() {
           >
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-teal-600" />
-              <span className="font-medium">8328418468</span>
+              <span className="font-medium">832-921-1232</span>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-teal-600" />
-              <a href="mailto:hope@paveehealthcare.com" className="hover:text-teal-600 transition">
-                hope@paveehealthcare.com
+              <a href="mailto:hope@pavedhealthcare.com" className="hover:text-teal-600 transition">
+                hope@pavedhealthcare.com
               </a>
             </div>
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-teal-600 mt-1 flex-shrink-0" />
               <p>
-                12808 W Airport Blvd,
+                12808 West Airport Blvd suite 255C 
                 <br />
-                Sugar Land, TX, USA
+                Sugar Land Texas 77386-1364
               </p>
             </div>
           </motion.div>

@@ -10,37 +10,42 @@ const services = [
     title: "Consultation",
     description:
       "Lifestyle assessments, nutrition guidance, and wellness planning to help prevent illness and promote long-term health.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
   },
   {
     icon: <Video className="w-8 h-8" />,
     title: "Telehealth visit",
     description:
       "Routine check-ups, and general health concerns handled via secure video or phone call. Review prescriptions, adjust dosages, and get refills through virtual appointments with a provider.",
+    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
   },
   {
     icon: <Zap className="w-8 h-8" />,
     title: "Urgent Care Call",
     description:
       "Quick evaluations for non-emergency issues like cold symptoms, minor infections, or skin rashes—no waiting room required.",
+    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
   },
   {
     icon: <Syringe className="w-8 h-8" />,
     title: "Injection Services",
     description:
       "Administration of prescribed medications such as antibiotics, vitamin B12, or hormonal therapies via intramuscular or subcutaneous routes. Adult and pediatric immunizations delivered safely at home.",
-    badge: "Show more",
+    image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80", // Nurse giving injection / vaccine
   },
   {
     icon: <Heart className="w-8 h-8" />,
     title: "Womans Health Services",
     description:
       "Support for prenatal care, postpartum check-ins, contraception counseling, and menstrual health—all from home.",
+    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
   },
   {
     icon: <Phone className="w-8 h-8" />,
     title: "Symptoms Assessment and Treatment",
     description:
       "Assessment of STD related symptoms, UTI, Yeast infections and Bacterial Vaginosis. Depending on visit a prescription may be sent to your desired pharmacy.",
+    image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80", 
   },
 ];
 
@@ -109,14 +114,15 @@ export default function Services() {
               {/* Gradient Overlay on Hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              {/* Floating Image (mimicking your screenshot) */}
+              {/* Floating Image – now unique per service */}
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src={`/images/service.png`}
-                  alt={service.title}
+                  src={service.image}
+                  alt={`${service.title} illustration`}
                   fill
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  priority={index < 3} // Optional: prioritize loading first few
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               </div>
@@ -135,14 +141,14 @@ export default function Services() {
                 </p>
 
                 {/* Optional Badge (only for Injection Services) */}
-                {service.badge && (
+                {/* {service.badge && (
                   <motion.span
                     whileHover={{ x: 5 }}
                     className="inline-block mt-6 text-teal-600 font-semibold text-sm tracking-wider cursor-pointer"
                   >
                     {service.badge} →
                   </motion.span>
-                )}
+                )} */}
               </div>
 
               {/* Subtle bottom glow on hover */}

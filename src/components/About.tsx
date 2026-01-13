@@ -45,13 +45,13 @@ export default function AboutUs() {
             environment that reflects that belief.
           </p>
 
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 bg-gray-800 text-white rounded-xl shadow-lg hover:bg-gray-900 transition-colors duration-300 mx-auto lg:mx-0"
           >
             Learn More
-          </motion.button>
+          </motion.button> */}
         </motion.div>
 
         {/* Right Side: Image */}

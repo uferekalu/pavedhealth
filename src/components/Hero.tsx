@@ -69,7 +69,7 @@ export default function Hero() {
                             Because your health is our priority.
                         </p>
 
-                        <motion.button
+                        {/* <motion.button
                             whileHover={{ scale: 1.08 }}
                             whileTap={{ scale: 0.95 }}
                             className="
@@ -88,7 +88,7 @@ export default function Hero() {
             "
                         >
                             Learn More
-                        </motion.button>
+                        </motion.button> */}
                     </motion.div>
                 </div>
             </main>
