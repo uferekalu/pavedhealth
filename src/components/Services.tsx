@@ -24,7 +24,7 @@ const services = [
     title: "Urgent Care Call",
     description:
       "Quick evaluations for non-emergency issues like cold symptoms, minor infections, or skin rashes—no waiting room required.",
-    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    image: "https://media.istockphoto.com/id/1480360596/photo/female-nurse-makes-patient-calls-as-unrecognizable-doctor-arrives.jpg?s=612x612&w=0&k=20&c=gXIhqGpACN6CLgiz5scgcY1h8SXKISKhsyq9y075EcQ=",
   },
   {
     icon: <Syringe className="w-8 h-8" />,
@@ -38,14 +38,14 @@ const services = [
     title: "Womans Health Services",
     description:
       "Support for prenatal care, postpartum check-ins, contraception counseling, and menstrual health—all from home.",
-    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
+    image: "/images/telehealth.jpg",
   },
   {
     icon: <Phone className="w-8 h-8" />,
     title: "Symptoms Assessment and Treatment",
     description:
       "Assessment of STD related symptoms, UTI, Yeast infections and Bacterial Vaginosis. Depending on visit a prescription may be sent to your desired pharmacy.",
-    image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80", 
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHh_Br85q8iE984YwaeE7OBioHovO-_Ul2pg&s", 
   },
 ];
 

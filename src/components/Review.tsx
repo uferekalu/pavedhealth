@@ -10,28 +10,28 @@ import { Star, Quote } from "lucide-react";
 const reviews = [
   {
     name: "Sofia Kim",
-    role: "Patient, Los Angeles",
+    role: "Patient",
     text: "The telehealth service was incredibly convenient and made my treatment easier than ever. I felt truly cared for.",
     avatar: "/images/avatar.jpg",
     rating: 5,
   },
   {
     name: "Daniel Brooks",
-    role: "Patient, New York",
+    role: "Patient",
     text: "Professional, compassionate, and lightning-fast response. This is healthcare reimagined. Highly recommended!",
     avatar: "/images/avatar.jpg",
     rating: 5,
   },
   {
     name: "Amelia Hart",
-    role: "Patient, Miami",
+    role: "Patient",
     text: "I saved hours and still got personalized care from the comfort of home. The future of medicine is here.",
     avatar: "/images/avatar.jpg",
     rating: 5,
   },
   {
     name: "Marcus Chen",
-    role: "Patient, Seattle",
+    role: "Patient",
     text: "From booking to follow-up — seamless. The doctor was attentive and the experience felt premium.",
     avatar: "/images/avatar.jpg",
     rating: 5,

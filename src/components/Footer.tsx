@@ -7,15 +7,27 @@ import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, X } from "
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [showTerms, setShowTerms] = useState(false);
+  const [showRefund, setShowRefund] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showAccessibility, setShowAccessibility] = useState(false);
 
   const footerLinks = [
-    { href: "#", label: "Privacy Policy" },
-    { href: "#", label: "Accessibility Statement" },
+    {
+      label: "Privacy Policy",
+      onClick: () => setShowPrivacy(true),
+    },
+    {
+      label: "Accessibility Statement",
+      onClick: () => setShowAccessibility(true),
+    },
     {
       label: "Terms & Conditions",
       onClick: () => setShowTerms(true),
     },
-    { href: "#", label: "Refund Policy" },
+    {
+      label: "Refund Policy",
+      onClick: () => setShowRefund(true),
+    },
   ];
 
   const socialIcons = [
@@ -23,7 +35,7 @@ export default function Footer() {
     { Icon: Instagram, href: "https://instagram.com", label: "Instagram" },
     { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
     { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  ];
+  ]
 
   return (
     <>
@@ -154,6 +166,231 @@ export default function Footer() {
           </motion.div>
         </div>
       </footer>
+      {showPrivacy && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+          >
+            <div className="bg-teal-600 text-white px-6 py-5 flex items-center justify-between">
+              <h2 className="text-xl md:text-2xl font-bold">
+                Paved HealthCare Services – Website Privacy Policy
+              </h2>
+              <button
+                onClick={() => setShowPrivacy(false)}
+                className="p-2 rounded-full hover:bg-teal-700 transition"
+                aria-label="Close"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="p-6 md:p-8 overflow-y-auto flex-1 prose prose-sm md:prose-base max-w-none text-gray-800">
+              <p className="text-gray-500 font-medium mb-6">
+                Last updated: January 2026
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">1. Introduction</h3>
+              <p>
+                Paved HealthCare Services (“we,” “our,” or “us”) is committed to protecting the privacy of all visitors who access our website. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our site.
+              </p>
+              <p className="mt-3">
+                This policy applies only to information collected through our website and not to clinical records or protected health information (PHI) governed by HIPAA. For PHI, please refer to our HIPAA Notice of Privacy Practices.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">2. Information We Collect</h3>
+              <p>We may collect the following types of information:</p>
+
+              <div className="mt-4">
+                <strong className="block text-teal-800 mb-2">A. Personal Information (Provided Voluntarily)</strong>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Name</li>
+                  <li>Email address</li>
+                  <li>Phone number</li>
+                  <li>Information submitted through contact forms or appointment requests</li>
+                </ul>
+              </div>
+
+              <div className="mt-6">
+                <strong className="block text-teal-800 mb-2">B. Automatically Collected Information</strong>
+                <p className="mb-2">
+                  When you visit our website, certain data may be collected automatically, including:
+                </p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>IP address</li>
+                  <li>Browser type and version</li>
+                  <li>Device information</li>
+                  <li>Pages visited and time spent on the site</li>
+                  <li>Cookies and tracking technologies</li>
+                </ul>
+              </div>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">3. How We Use Your Information</h3>
+              <p>We may use collected information to:</p>
+              <ul className="list-disc pl-6 mt-3 space-y-1">
+                <li>Respond to inquiries or appointment requests</li>
+                <li>Improve website functionality and user experience</li>
+                <li>Send updates, newsletters, or service information (with your consent)</li>
+                <li>Maintain website security and prevent misuse</li>
+                <li>Comply with legal or regulatory requirements</li>
+              </ul>
+              <p className="mt-4 font-medium">
+                We do not sell or rent your personal information.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">4. Sharing Your Information</h3>
+              <p>We may share information only in the following situations:</p>
+              <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li>
+                  <strong>Service Providers:</strong> Website hosting, analytics, or email delivery partners who assist in operating our site
+                </li>
+                <li>
+                  <strong>Legal Requirements:</strong> When required by law, court order, or regulatory authority
+                </li>
+                <li>
+                  <strong>Business Operations:</strong> If necessary to protect our rights, safety, or property
+                </li>
+              </ul>
+              <p className="mt-4">
+                All third-party partners are required to maintain confidentiality and security.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">5. Cookies & Tracking Technologies</h3>
+              <p>
+                Our website may use cookies, pixels, or analytics tools to:
+              </p>
+              <ul className="list-disc pl-6 mt-3 space-y-1">
+                <li>Understand how visitors use the site</li>
+                <li>Improve performance and navigation</li>
+                <li>Personalize content</li>
+              </ul>
+              <p className="mt-4">
+                You may disable cookies in your browser settings, but some features may not function properly.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">6. Data Security</h3>
+              <p>
+                We implement reasonable administrative, technical, and physical safeguards to protect your information. However, no online transmission is 100% secure, and we cannot guarantee absolute protection.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">7. Children’s Privacy</h3>
+              <p>
+                Our website is not intended for children under 13. We do not knowingly collect information from children. If we learn that we have collected such data, we will delete it promptly.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">8. External Links</h3>
+              <p>
+                Our website may contain links to third-party sites. We are not responsible for the privacy practices or content of those websites.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">9. Updates to This Policy</h3>
+              <p>
+                We may update this Privacy Policy periodically. Changes will be posted on this page with an updated “Last Updated” date.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">10. Contact Information</h3>
+              <p>
+                For questions about this Privacy Policy or your data, contact:
+              </p>
+              <div className="mt-4 space-y-1 not-prose">
+                <p className="font-medium">Paved HealthCare Services</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:hope@pavedhealthcare.com" className="text-teal-600 hover:underline">
+                    hope@pavedhealthcare.com
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 px-6 py-4 flex justify-end">
+              <button
+                onClick={() => setShowPrivacy(false)}
+                className="px-6 py-2.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition font-medium"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+      {showAccessibility && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+          >
+            <div className="bg-teal-600 text-white px-6 py-5 flex items-center justify-between">
+              <h2 className="text-xl md:text-2xl font-bold">
+                Paved HealthCare Services – Accessibility Statement
+              </h2>
+              <button
+                onClick={() => setShowAccessibility(false)}
+                className="p-2 rounded-full hover:bg-teal-700 transition"
+                aria-label="Close"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="p-6 md:p-8 overflow-y-auto flex-1 prose prose-sm md:prose-base max-w-none text-gray-800">
+              <p className="text-gray-500 font-medium mb-6">
+                Compliance-Focused
+              </p>
+
+              <p className="mb-6">
+                Paved HealthCare Services is committed to ensuring that our website is accessible to all individuals, including people with disabilities. We strive to meet or exceed the requirements of the Americans with Disabilities Act (ADA) and follow the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA to provide an inclusive online experience.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">Our Accessibility Efforts</h3>
+              <p>
+                To support accessibility, we take the following measures:
+              </p>
+              <ul className="list-disc pl-6 mt-3 space-y-2">
+                <li>Provide text alternatives (alt text) for images</li>
+                <li>Maintain appropriate color contrast for readability</li>
+                <li>Ensure our site is navigable by keyboard</li>
+                <li>Use clear headings, labels, and structure</li>
+                <li>Test pages with assistive technologies when possible</li>
+                <li>Review accessibility features during website updates</li>
+              </ul>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">Ongoing Improvements</h3>
+              <p>
+                We recognize that accessibility is an ongoing effort. We regularly review our website to identify and correct accessibility issues and to improve usability for all visitors.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">Feedback and Assistance</h3>
+              <p>
+                If you experience difficulty accessing any part of our website or need information in an alternative format, we encourage you to contact us. We will respond promptly and work to provide the information you need.
+              </p>
+
+              <div className="mt-6 space-y-1 not-prose">
+                <p className="font-medium">Contact:</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:hope@pavedhealthcare.com" className="text-teal-600 hover:underline">
+                    hope@pavedhealthcare.com
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 px-6 py-4 flex justify-end">
+              <button
+                onClick={() => setShowAccessibility(false)}
+                className="px-6 py-2.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition font-medium"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
       {showTerms && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
           <motion.div
@@ -350,6 +587,125 @@ export default function Footer() {
             <div className="border-t border-gray-200 px-6 py-4 flex justify-end">
               <button
                 onClick={() => setShowTerms(false)}
+                className="px-6 py-2.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition font-medium"
+              >
+                Close
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      )}
+      {showRefund && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.95, y: 20 }}
+            className="relative bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+          >
+            <div className="bg-teal-600 text-white px-6 py-5 flex items-center justify-between">
+              <h2 className="text-xl md:text-2xl font-bold">
+                Paved HealthCare Services – Refund Policy
+              </h2>
+              <button
+                onClick={() => setShowRefund(false)}
+                className="p-2 rounded-full hover:bg-teal-700 transition"
+                aria-label="Close"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            <div className="p-6 md:p-8 overflow-y-auto flex-1 prose prose-sm md:prose-base max-w-none text-gray-800">
+              <p className="text-gray-500 font-medium mb-6">
+                Last updated: January 2026
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">Purpose</h3>
+              <p>
+                Paved HealthCare Services is committed to providing high-quality, patient-centered care. This Refund Policy outlines the circumstances under which refunds may be issued for services rendered.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">1. General Policy</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>All payments made for clinical services, consultations, and administrative fees are non-refundable once the service has been provided.</li>
+                <li>Refunds may be considered only in specific, limited situations outlined below.</li>
+              </ul>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">2. Refund Eligibility</h3>
+              <p>Refunds may be issued under the following conditions:</p>
+              <ul className="list-decimal pl-6 mt-3 space-y-4 font-medium">
+                <li>
+                  <span className="block text-teal-800">A. Duplicate Payments</span>
+                  If a client is mistakenly charged twice for the same service, the duplicate payment will be refunded in full.
+                </li>
+                <li>
+                  <span className="block text-teal-800">B. Billing Errors</span>
+                  If an administrative or billing error occurs on the part of Paved HealthCare Services, corrections will be made promptly, and any overpayment will be refunded.
+                </li>
+                <li>
+                  <span className="block text-teal-800">C. Service Not Rendered</span>
+                  If a client pays for a service that was not provided due to scheduling, provider availability, or other operational issues, the client may choose:
+                  <ul className="list-disc pl-8 mt-2 space-y-1 font-normal">
+                    <li>A full refund, or</li>
+                    <li>Application of the payment as a credit toward a future appointment.</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">3. Non-Refundable Items</h3>
+              <p>The following are not eligible for refunds:</p>
+              <ul className="list-disc pl-6 mt-3 space-y-1">
+                <li>Completed clinical visits or consultations</li>
+                <li>Wound care services already performed</li>
+                <li>Travel fees, mobile visit fees, or after-hours surcharges</li>
+                <li>Administrative fees (forms, letters, documentation requests)</li>
+                <li>No-show or late cancellation fees</li>
+                <li>Supplies purchased or used during treatment</li>
+              </ul>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">4. Appointment Cancellations</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>Cancellations made 24 hours or more before the scheduled appointment may be eligible for a credit toward a future service.</li>
+                <li>Cancellations made less than 24 hours before the appointment, or failure to attend, are subject to the full no-show fee and are not refundable.</li>
+              </ul>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">5. Refund Request Process</h3>
+              <p>
+                Clients requesting a refund must submit a written request including:
+              </p>
+              <ul className="list-disc pl-6 mt-3 space-y-1">
+                <li>Full name</li>
+                <li>Date of service</li>
+                <li>Reason for refund request</li>
+                <li>Proof of payment (if available)</li>
+              </ul>
+              <p className="mt-4">
+                Requests may be submitted via email to <strong>admin@pavedhealthcare.com</strong> or through the patient portal.
+              </p>
+              <p className="mt-3">
+                Refunds, when approved, will be processed within 7–10 business days.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">6. Method of Refund</h3>
+              <p>
+                Approved refunds will be issued using the original method of payment unless otherwise required by law or system limitations.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">7. Provider Discretion</h3>
+              <p>
+                Paved HealthCare Services reserves the right to review each refund request individually. Decisions will be made in alignment with clinical documentation, compliance standards, and internal policies.
+              </p>
+
+              <h3 className="text-teal-700 font-bold text-lg mt-8 mb-3">8. Policy Updates</h3>
+              <p>
+                This policy may be updated periodically to reflect changes in regulations, payer requirements, or operational needs. The most current version will always be available upon request.
+              </p>
+            </div>
+
+            <div className="border-t border-gray-200 px-6 py-4 flex justify-end">
+              <button
+                onClick={() => setShowRefund(false)}
                 className="px-6 py-2.5 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition font-medium"
               >
                 Close
