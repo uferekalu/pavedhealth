@@ -123,34 +123,20 @@ export default function Footer() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="flex flex-col items-start md:items-end space-y-3 text-sm text-gray-600"
             >
-              {footerLinks.map((link, i) =>
-                link.onClick ? (
-                  <motion.button
-                    key={link.label}
-                    type="button"
-                    onClick={link.onClick}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * i + 0.4 }}
-                    whileHover={{ x: 4, color: "#14b8a6" }}
-                    className="hover:text-teal-500 transition-all duration-300 text-left"
-                  >
-                    {link.label}
-                  </motion.button>
-                ) : (
-                  <motion.a
-                    key={link.label}
-                    href={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 * i + 0.4 }}
-                    whileHover={{ x: 4, color: "#14b8a6" }}
-                    className="hover:text-teal-500 transition-all duration-300"
-                  >
-                    {link.label}
-                  </motion.a>
-                )
-              )}
+              {footerLinks.map((link, i) => (
+                <motion.button
+                  key={link.label}
+                  type="button"
+                  onClick={link.onClick}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 * i + 0.4 }}
+                  whileHover={{ x: 4, color: "#14b8a6" }}
+                  className="hover:text-teal-500 transition-all duration-300 text-left cursor-pointer"
+                >
+                  {link.label}
+                </motion.button>
+              ))}
             </motion.div>
           </div>
           <motion.div
