@@ -50,7 +50,7 @@ export default function Footer() {
               className="space-y-6"
             >
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter">
-                Paveé
+                Paved
                 <span className="text-teal-600">Healthcare</span>
               </h2>
               <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-xs">
@@ -148,7 +148,7 @@ export default function Footer() {
             className="mt-16 pt-8 border-t border-gray-300 text-center text-sm text-gray-500"
           >
             <p>
-              © {currentYear} by Paveé Healthcare. All rights reserved.{" "}
+              © {currentYear} by Paved Healthcare. All rights reserved.{" "}
               <span className="text-teal-600 font-medium">Powered and secured by hope</span>
             </p>
           </motion.div>
@@ -189,14 +189,16 @@ export default function Footer() {
                 </li>
 
                 <li>
-                  <strong className="text-teal-700 block mb-2 text-lg">2. No Medical Advice</strong>
-                  <p>The content on this Site is provided for general informational and educational purposes only.</p>
-                  <p>Nothing on this Site should be interpreted as medical advice, diagnosis, or treatment.</p>
+                  <strong className="text-teal-700 block mb-2 text-lg">2. Medical Emergencies</strong>
+                  <p>If you are experience a medical emergency, please contact 911. </p>
+                  <p>Emergencies are situations such as:</p>
                   <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>The Site does not create a patient–provider relationship.</li>
-                    <li>Do not rely on Site content for medical decisions.</li>
-                    <li>Always seek the advice of a licensed healthcare professional for medical concerns.</li>
-                    <li>If you are experiencing a medical emergency, call 911 immediately.</li>
+                    <li>shortness of breath</li>
+                    <li>cardiac issues (heart attack)</li>
+                    <li>chocking, head injuries, seizures, severe trauma such as bleeding, deep wounds, spinal injury or accidents
+                      and severe allergic reactions (anaphylaxis). Key warning signs involve sudden chest pain, trouble breathing, confusion,
+                      one sided weakness, vision changes or loss of consciousness.
+                    </li>
                   </ul>
                 </li>
 

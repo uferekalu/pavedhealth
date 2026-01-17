@@ -95,7 +95,7 @@ export default function Header() {
       >
         <div className="max-w-screen-2xl mx-auto h-[70px] flex items-center justify-between px-6">
           <div className="text-xl font-bold tracking-tight text-[#8B0000]">
-            Paveé Healthcare
+            Paved Healthcare
           </div>
           <nav className="hidden lg:flex items-center space-x-7 text-black font-medium">
             {navLinks.map((link) => {
@@ -194,7 +194,7 @@ export default function Header() {
               className="fixed right-0 top-0 bottom-0 w-[85%] max-w-xs bg-white z-50 shadow-2xl flex flex-col"
             >
               <div className="flex justify-between items-center p-5 border-b">
-                <div className="text-lg font-bold text-[#8B0000]">Paveé</div>
+                <div className="text-lg font-bold text-[#8B0000]">Paved</div>
                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 rounded-lg hover:bg-gray-100">
                   <X className="w-7 h-7 text-black" />
                 </button>
