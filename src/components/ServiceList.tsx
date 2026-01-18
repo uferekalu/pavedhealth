@@ -36,7 +36,7 @@ const bookingServices = [
     icon: <Heart className="w-10 h-10" />,
     image: "/images/injection.png",
     description:
-      "Safe and comfortable Injection assistance is performed by trained healthcare professionals using sterile technique and best practices. We handle a wide range of injections including intramuscular (IM), subcutaneous (SC), intradermal, and vaccinations (flu, COVID, travel-related, etc.). Each session includes proper site selection, patient education on post-injection care, monitoring for immediate reactions, and documentation. Ideal for patients requiring regular injections (e.g., insulin, B12, hormones, biologics) or one-time immunizations in a calm, clinical setting.",
+      "Safe and comfortable Injection assistance is performed by trained healthcare professionals using sterile technique and best practices. We handle a wide range of injections including intramuscular (IM), subcutaneous (SC), intradermal, and vaccinations. Each session includes proper site selection, patient education on post-injection care, monitoring for immediate reactions, and documentation. Ideal for patients requiring regular injections (e.g., insulin, B12, hormones, biologics) or one-time immunizations in the comfort of your home.",
   },
 ];
 
