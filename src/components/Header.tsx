@@ -119,48 +119,11 @@ export default function Header() {
             })}
           </nav>
 
-          <div className="hidden lg:flex items-center space-x-6">
+          {/* <div className="hidden lg:flex items-center space-x-6">
             <button className="px-4 py-2 text-sm font-semibold border border-[#8B0000] text-[#8B0000] rounded-lg hover:bg-[#8B0000] hover:text-white transition">
               Login
             </button>
-
-            {/* <div className="relative" ref={langRef}>
-              <button
-                onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-2 bg-white border border-gray-200 px-3 py-2 rounded-xl text-sm shadow-sm hover:shadow transition"
-              >
-                <ReactCountryFlag countryCode={selectedLang.code} svg style={{ width: 18, height: 18 }} />
-                {selectedLang.short}
-                <ChevronDown size={16} />
-              </button>
-
-              <AnimatePresence>
-                {isLangOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    className="absolute right-0 mt-2 w-44 bg-white shadow-xl border border-gray-100 rounded-xl overflow-hidden z-50"
-                  >
-                    {LANGUAGES.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => handleLanguageSelect(lang)}
-                        className={`flex items-center gap-3 w-full px-4 py-3 text-sm transition ${
-                          selectedLang.code === lang.code
-                            ? "bg-[#8B0000] text-white"
-                            : "hover:bg-gray-100"
-                        }`}
-                      >
-                        <ReactCountryFlag countryCode={lang.code} svg style={{ width: 18, height: 18 }} />
-                        {lang.label}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div> */}
-          </div>
+          </div> */}
 
           {/* MOBILE MENU BUTTON */}
           <div className="lg:hidden">
@@ -212,8 +175,8 @@ export default function Header() {
                         whileTap={{ scale: 0.97 }}
                         className={`block px-5 py-4 text-base text-black font-semibold rounded-xl transition ${
                           isActive
-                            ? "bg-[#8B0000] text-white"
-                            : "bg-gray-50 hover:bg-[#8B0000] hover:text-white"
+                            ? "bg-teal-600 text-white"
+                            : "bg-gray-50 hover:bg-teal-600 hover:text-white"
                         }`}
                       >
                         {link.name}
@@ -221,50 +184,6 @@ export default function Header() {
                     );
                   })}
                 </nav>
-
-                <button className="w-full py-4 bg-[#8B0000] text-white rounded-xl text-lg font-semibold shadow-lg hover:bg-red-900 transition">
-                  Login
-                </button>
-
-                {/* Mobile Language Switcher */}
-                {/* <div ref={mobileLangRef}>
-                  <button
-                    onClick={() => setIsLangOpen(!isLangOpen)}
-                    className="flex justify-between w-full px-4 py-4 bg-[#880000] rounded-xl font-semibold text-sm"
-                  >
-                    <span className="flex items-center gap-3 text-white">
-                      <ReactCountryFlag countryCode={selectedLang.code} svg style={{ width: 22, height: 22 }} />
-                      {selectedLang.label}
-                    </span>
-                    <ChevronDown />
-                  </button>
-
-                  <AnimatePresence>
-                    {isLangOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: -6 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -6 }}
-                        className="mt-2 space-y-2"
-                      >
-                        {LANGUAGES.map((lang) => (
-                          <button
-                            key={lang.code}
-                            onClick={() => handleLanguageSelect(lang)}
-                            className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl ${
-                              selectedLang.code === lang.code
-                                ? "bg-[#8B0000] text-white"
-                                : "bg-gray-50 hover:bg-gray-100"
-                            }`}
-                          >
-                            <ReactCountryFlag countryCode={lang.code} svg style={{ width: 22, height: 22 }} />
-                            {lang.label}
-                          </button>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div> */}
               </div>
             </motion.div>
           </>

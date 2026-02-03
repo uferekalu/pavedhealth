@@ -31,7 +31,7 @@ export default function Commitment() {
 
                         {/* Shorter, Punchier Text */}
                         <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-lg">
-                            At Paveé Healthcare, we specialize in advanced wound care and mobile health solutions —
+                            At Paved Healthcare, we specialize in advanced wound care and mobile health solutions —
                             delivered through telehealth and in-person visits. Your healing is our purpose.
                         </p>
 
